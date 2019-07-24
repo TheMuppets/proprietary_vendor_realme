@@ -42,8 +42,12 @@ PRODUCT_COPY_FILES += \
     vendor/realme/RMX1801/proprietary/etc/init/wfdservice.rc:system/etc/init/wfdservice.rc \
     vendor/realme/RMX1801/proprietary/etc/permissions/cneapiclient.xml:system/etc/permissions/cneapiclient.xml \
     vendor/realme/RMX1801/proprietary/etc/permissions/com.qti.dpmframework.xml:system/etc/permissions/com.qti.dpmframework.xml \
+    vendor/realme/RMX1801/proprietary/etc/permissions/com.qti.location.sdk.xml:system/etc/permissions/com.qti.location.sdk.xml \
+    vendor/realme/RMX1801/proprietary/etc/permissions/com.qualcomm.location.xml:system/etc/permissions/com.qualcomm.location.xml \
     vendor/realme/RMX1801/proprietary/etc/permissions/com.quicinc.cne.xml:system/etc/permissions/com.quicinc.cne.xml \
     vendor/realme/RMX1801/proprietary/etc/permissions/dpmapi.xml:system/etc/permissions/dpmapi.xml \
+    vendor/realme/RMX1801/proprietary/etc/permissions/izat.xt.srv.xml:system/etc/permissions/izat.xt.srv.xml \
+    vendor/realme/RMX1801/proprietary/etc/permissions/privapp-permissions-com.qualcomm.location.xml:system/etc/permissions/privapp-permissions-com.qualcomm.location.xml \
     vendor/realme/RMX1801/proprietary/etc/permissions/qcrilhook.xml:system/etc/permissions/qcrilhook.xml \
     vendor/realme/RMX1801/proprietary/etc/permissions/qti_libpermissions.xml:system/etc/permissions/qti_libpermissions.xml \
     vendor/realme/RMX1801/proprietary/etc/permissions/qti_permissions.xml:system/etc/permissions/qti_permissions.xml \
@@ -90,8 +94,10 @@ PRODUCT_COPY_FILES += \
     vendor/realme/RMX1801/proprietary/framework/QtiTelephonyServicelibrary.jar:system/framework/QtiTelephonyServicelibrary.jar \
     vendor/realme/RMX1801/proprietary/framework/cneapiclient.jar:system/framework/cneapiclient.jar \
     vendor/realme/RMX1801/proprietary/framework/com.qti.dpmframework.jar:system/framework/com.qti.dpmframework.jar \
+    vendor/realme/RMX1801/proprietary/framework/com.qti.location.sdk.jar:system/framework/com.qti.location.sdk.jar \
     vendor/realme/RMX1801/proprietary/framework/com.quicinc.cne.jar:system/framework/com.quicinc.cne.jar \
     vendor/realme/RMX1801/proprietary/framework/dpmapi.jar:system/framework/dpmapi.jar \
+    vendor/realme/RMX1801/proprietary/framework/izat.xt.srv.jar:system/framework/izat.xt.srv.jar \
     vendor/realme/RMX1801/proprietary/framework/qcrilhook.jar:system/framework/qcrilhook.jar \
     vendor/realme/RMX1801/proprietary/framework/qti-telephony-common.jar:system/framework/qti-telephony-common.jar \
     vendor/realme/RMX1801/proprietary/framework/tcmclient.jar:system/framework/tcmclient.jar \
@@ -150,6 +156,7 @@ PRODUCT_COPY_FILES += \
     vendor/realme/RMX1801/proprietary/lib64/libdpmtcm.so:system/lib64/libdpmtcm.so \
     vendor/realme/RMX1801/proprietary/lib64/libimscamera_jni.so:system/lib64/libimscamera_jni.so \
     vendor/realme/RMX1801/proprietary/lib64/libimsmedia_jni.so:system/lib64/libimsmedia_jni.so \
+    vendor/realme/RMX1801/proprietary/lib64/liblocationservice_jni.so:system/lib64/liblocationservice_jni.so \
     vendor/realme/RMX1801/proprietary/lib64/libmmosal.so:system/lib64/libmmosal.so \
     vendor/realme/RMX1801/proprietary/lib64/libmmrtpdecoder.so:system/lib64/libmmrtpdecoder.so \
     vendor/realme/RMX1801/proprietary/lib64/libmmrtpencoder.so:system/lib64/libmmrtpencoder.so \
@@ -157,9 +164,15 @@ PRODUCT_COPY_FILES += \
     vendor/realme/RMX1801/proprietary/lib64/libsdm-disp-apis.so:system/lib64/libsdm-disp-apis.so \
     vendor/realme/RMX1801/proprietary/lib64/libwfdclient.so:system/lib64/libwfdclient.so \
     vendor/realme/RMX1801/proprietary/lib64/libwfdnative.so:system/lib64/libwfdnative.so \
+    vendor/realme/RMX1801/proprietary/lib64/libxt_native.so:system/lib64/libxt_native.so \
     vendor/realme/RMX1801/proprietary/lib64/vendor.display.color@1.0.so:system/lib64/vendor.display.color@1.0.so \
     vendor/realme/RMX1801/proprietary/lib64/vendor.display.color@1.1.so:system/lib64/vendor.display.color@1.1.so \
     vendor/realme/RMX1801/proprietary/lib64/vendor.display.color@1.2.so:system/lib64/vendor.display.color@1.2.so \
+    vendor/realme/RMX1801/proprietary/lib64/vendor.qti.gnss@1.0.so:system/lib64/vendor.qti.gnss@1.0.so \
+    vendor/realme/RMX1801/proprietary/lib64/vendor.qti.gnss@1.1.so:system/lib64/vendor.qti.gnss@1.1.so \
+    vendor/realme/RMX1801/proprietary/lib64/vendor.qti.gnss@1.2.so:system/lib64/vendor.qti.gnss@1.2.so \
+    vendor/realme/RMX1801/proprietary/lib64/vendor.qti.gnss@2.0.so:system/lib64/vendor.qti.gnss@2.0.so \
+    vendor/realme/RMX1801/proprietary/lib64/vendor.qti.gnss@2.1.so:system/lib64/vendor.qti.gnss@2.1.so \
     vendor/realme/RMX1801/proprietary/lib64/vendor.qti.hardware.alarm@1.0.so:system/lib64/vendor.qti.hardware.alarm@1.0.so \
     vendor/realme/RMX1801/proprietary/lib64/vendor.qti.hardware.data.latency@1.0.so:system/lib64/vendor.qti.hardware.data.latency@1.0.so \
     vendor/realme/RMX1801/proprietary/lib64/vendor.qti.hardware.iop@1.0.so:system/lib64/vendor.qti.hardware.iop@1.0.so \
@@ -174,6 +187,7 @@ PRODUCT_PACKAGES += \
     QtiTelephonyService \
     CNEService \
     WfdService \
+    com.qualcomm.location \
     dpmserviceapp \
     ims \
     qcrilmsgtunnel \
