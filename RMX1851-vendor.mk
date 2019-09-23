@@ -70,6 +70,8 @@ PRODUCT_COPY_FILES += \
     vendor/realme/RMX1851/proprietary/lib/libmmosal.so:system/lib/libmmosal.so \
     vendor/realme/RMX1851/proprietary/lib/libmmparser_lite.so:system/lib/libmmparser_lite.so \
     vendor/realme/RMX1851/proprietary/lib/libmmrtpdecoder.so:system/lib/libmmrtpdecoder.so \
+    vendor/realme/RMX1851/proprietary/lib/libmmrtpdecoder.so:system/lib/libmmrtpdecoder.so \
+    vendor/realme/RMX1851/proprietary/lib/libmmrtpencoder.so:system/lib/libmmrtpencoder.so \
     vendor/realme/RMX1851/proprietary/lib/libmmrtpencoder.so:system/lib/libmmrtpencoder.so \
     vendor/realme/RMX1851/proprietary/lib/libqdMetaData.system.so:system/lib/libqdMetaData.system.so \
     vendor/realme/RMX1851/proprietary/lib/librcc.so:system/lib/librcc.so \
