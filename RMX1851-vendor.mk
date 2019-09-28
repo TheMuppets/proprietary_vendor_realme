@@ -53,6 +53,7 @@ PRODUCT_COPY_FILES += \
     vendor/realme/RMX1851/proprietary/lib/com.qualcomm.qti.wifidisplayhal@1.0.so:system/lib/com.qualcomm.qti.wifidisplayhal@1.0.so \
     vendor/realme/RMX1851/proprietary/lib/com.quicinc.cne.server@1.0.so:system/lib/com.quicinc.cne.server@1.0.so \
     vendor/realme/RMX1851/proprietary/lib/extractors/libmmparser.so:system/lib/extractors/libmmparser.so \
+    vendor/realme/RMX1851/proprietary/lib/fm_helium.so:system/lib/fm_helium.so \
     vendor/realme/RMX1851/proprietary/lib/lib-imsvideocodec.so:system/lib/lib-imsvideocodec.so \
     vendor/realme/RMX1851/proprietary/lib/lib-imsvt.so:system/lib/lib-imsvt.so \
     vendor/realme/RMX1851/proprietary/lib/lib-imsvtextutils.so:system/lib/lib-imsvtextutils.so \
@@ -65,6 +66,7 @@ PRODUCT_COPY_FILES += \
     vendor/realme/RMX1851/proprietary/lib/libdpmfdmgr.so:system/lib/libdpmfdmgr.so \
     vendor/realme/RMX1851/proprietary/lib/libdpmframework.so:system/lib/libdpmframework.so \
     vendor/realme/RMX1851/proprietary/lib/libdpmtcm.so:system/lib/libdpmtcm.so \
+    vendor/realme/RMX1851/proprietary/lib/libfm-hci.so:system/lib/libfm-hci.so \
     vendor/realme/RMX1851/proprietary/lib/libimscamera_jni.so:system/lib/libimscamera_jni.so \
     vendor/realme/RMX1851/proprietary/lib/libimsmedia_jni.so:system/lib/libimsmedia_jni.so \
     vendor/realme/RMX1851/proprietary/lib/libmmosal.so:system/lib/libmmosal.so \
@@ -120,6 +122,7 @@ PRODUCT_COPY_FILES += \
     vendor/realme/RMX1851/proprietary/lib64/com.qualcomm.qti.uceservice@2.0.so:system/lib64/com.qualcomm.qti.uceservice@2.0.so \
     vendor/realme/RMX1851/proprietary/lib64/com.quicinc.cne.server@1.0.so:system/lib64/com.quicinc.cne.server@1.0.so \
     vendor/realme/RMX1851/proprietary/lib64/extractors/libmmparser.so:system/lib64/extractors/libmmparser.so \
+    vendor/realme/RMX1851/proprietary/lib64/fm_helium.so:system/lib64/fm_helium.so \
     vendor/realme/RMX1851/proprietary/lib64/lib-imsvideocodec.so:system/lib64/lib-imsvideocodec.so \
     vendor/realme/RMX1851/proprietary/lib64/lib-imsvt.so:system/lib64/lib-imsvt.so \
     vendor/realme/RMX1851/proprietary/lib64/lib-imsvtextutils.so:system/lib64/lib-imsvtextutils.so \
@@ -131,6 +134,7 @@ PRODUCT_COPY_FILES += \
     vendor/realme/RMX1851/proprietary/lib64/libdpmfdmgr.so:system/lib64/libdpmfdmgr.so \
     vendor/realme/RMX1851/proprietary/lib64/libdpmframework.so:system/lib64/libdpmframework.so \
     vendor/realme/RMX1851/proprietary/lib64/libdpmtcm.so:system/lib64/libdpmtcm.so \
+    vendor/realme/RMX1851/proprietary/lib64/libfm-hci.so:system/lib64/libfm-hci.so \
     vendor/realme/RMX1851/proprietary/lib64/libimscamera_jni.so:system/lib64/libimscamera_jni.so \
     vendor/realme/RMX1851/proprietary/lib64/libimsmedia_jni.so:system/lib64/libimsmedia_jni.so \
     vendor/realme/RMX1851/proprietary/lib64/libmmosal.so:system/lib64/libmmosal.so \
@@ -165,6 +169,7 @@ PRODUCT_COPY_FILES += \
     vendor/realme/RMX1851/proprietary/lib64/soundfx/libvolumelistener.so:system/lib64/soundfx/libvolumelistener.so
 
 PRODUCT_PACKAGES += \
+    vendor.qti.hardware.fm@1.0 \
     QtiTelephonyService \
     SoterService \
     uceShimService \
