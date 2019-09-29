@@ -96,6 +96,7 @@ PRODUCT_COPY_FILES += \
     vendor/realme/RMX1851/proprietary/lib/libwfduibcsinkinterface.so:system/lib/libwfduibcsinkinterface.so \
     vendor/realme/RMX1851/proprietary/lib/libwfduibcsrc.so:system/lib/libwfduibcsrc.so \
     vendor/realme/RMX1851/proprietary/lib/libwfduibcsrcinterface.so:system/lib/libwfduibcsrcinterface.so \
+    vendor/realme/RMX1851/proprietary/lib/modules/hypnus.ko:system/lib/modules/hypnus.ko \
     vendor/realme/RMX1851/proprietary/lib/vendor.oppo.hardware.biometrics.face@1.0.so:system/lib/vendor.oppo.hardware.biometrics.face@1.0.so \
     vendor/realme/RMX1851/proprietary/lib/vendor.oppo.hardware.biometrics.fingerprint@2.1.so:system/lib/vendor.oppo.hardware.biometrics.fingerprint@2.1.so \
     vendor/realme/RMX1851/proprietary/lib/vendor.oppo.hardware.biometrics.fingerprintpay@1.0.so:system/lib/vendor.oppo.hardware.biometrics.fingerprintpay@1.0.so \
