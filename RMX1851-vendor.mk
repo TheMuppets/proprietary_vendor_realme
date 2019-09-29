@@ -42,9 +42,6 @@ PRODUCT_COPY_FILES += \
     vendor/realme/RMX1851/proprietary/framework/qcrilhook.jar:system/framework/qcrilhook.jar \
     vendor/realme/RMX1851/proprietary/framework/qti-telephony-common.jar:system/framework/qti-telephony-common.jar \
     vendor/realme/RMX1851/proprietary/framework/tcmclient.jar:system/framework/tcmclient.jar \
-    vendor/realme/RMX1851/proprietary/framework/vendor.oppo.hardware.biometrics.fingerprint-V2.1-java.jar:system/framework/vendor.oppo.hardware.biometrics.fingerprint-V2.1-java.jar \
-    vendor/realme/RMX1851/proprietary/framework/vendor.qti.hardware.fingerprint-V1.0-java.jar:system/framework/vendor.qti.hardware.fingerprint-V1.0-java.jar \
-    vendor/realme/RMX1851/proprietary/lib/android.frameworks.fingerprintservice@1.0.so:system/lib/android.frameworks.fingerprintservice@1.0.so \
     vendor/realme/RMX1851/proprietary/lib/com.qualcomm.qti.dpm.api@1.0.so:system/lib/com.qualcomm.qti.dpm.api@1.0.so \
     vendor/realme/RMX1851/proprietary/lib/com.qualcomm.qti.imscmservice@1.0.so:system/lib/com.qualcomm.qti.imscmservice@1.0.so \
     vendor/realme/RMX1851/proprietary/lib/com.qualcomm.qti.imscmservice@2.0.so:system/lib/com.qualcomm.qti.imscmservice@2.0.so \
@@ -97,12 +94,7 @@ PRODUCT_COPY_FILES += \
     vendor/realme/RMX1851/proprietary/lib/libwfduibcsrc.so:system/lib/libwfduibcsrc.so \
     vendor/realme/RMX1851/proprietary/lib/libwfduibcsrcinterface.so:system/lib/libwfduibcsrcinterface.so \
     vendor/realme/RMX1851/proprietary/lib/modules/hypnus.ko:system/lib/modules/hypnus.ko \
-    vendor/realme/RMX1851/proprietary/lib/vendor.oppo.hardware.biometrics.face@1.0.so:system/lib/vendor.oppo.hardware.biometrics.face@1.0.so \
-    vendor/realme/RMX1851/proprietary/lib/vendor.oppo.hardware.biometrics.fingerprint@2.1.so:system/lib/vendor.oppo.hardware.biometrics.fingerprint@2.1.so \
-    vendor/realme/RMX1851/proprietary/lib/vendor.oppo.hardware.biometrics.fingerprintpay@1.0.so:system/lib/vendor.oppo.hardware.biometrics.fingerprintpay@1.0.so \
     vendor/realme/RMX1851/proprietary/lib/vendor.oppo.hardware.ktv@1.0.so:system/lib/vendor.oppo.hardware.ktv@1.0.so \
-    vendor/realme/RMX1851/proprietary/lib/vendor.qti.hardware.biometrics.face@1.0-adapter-helper.so:system/lib/vendor.qti.hardware.biometrics.face@1.0-adapter-helper.so \
-    vendor/realme/RMX1851/proprietary/lib/vendor.qti.hardware.biometrics.face@1.0.so:system/lib/vendor.qti.hardware.biometrics.face@1.0.so \
     vendor/realme/RMX1851/proprietary/lib/vendor.qti.hardware.data.latency@1.0.so:system/lib/vendor.qti.hardware.data.latency@1.0.so \
     vendor/realme/RMX1851/proprietary/lib/vendor.qti.hardware.iop@1.0.so:system/lib/vendor.qti.hardware.iop@1.0.so \
     vendor/realme/RMX1851/proprietary/lib/vendor.qti.hardware.iop@2.0.so:system/lib/vendor.qti.hardware.iop@2.0.so \
@@ -115,7 +107,6 @@ PRODUCT_COPY_FILES += \
     vendor/realme/RMX1851/proprietary/lib/vendor.qti.ims.rcsconfig@1.0.so:system/lib/vendor.qti.ims.rcsconfig@1.0.so \
     vendor/realme/RMX1851/proprietary/lib/vendor.qti.imsrtpservice@1.0.so:system/lib/vendor.qti.imsrtpservice@1.0.so \
     vendor/realme/RMX1851/proprietary/lib/vendor.qti.latency@2.0.so:system/lib/vendor.qti.latency@2.0.so \
-    vendor/realme/RMX1851/proprietary/lib64/android.frameworks.fingerprintservice@1.0.so:system/lib64/android.frameworks.fingerprintservice@1.0.so \
     vendor/realme/RMX1851/proprietary/lib64/com.qualcomm.qti.dpm.api@1.0.so:system/lib64/com.qualcomm.qti.dpm.api@1.0.so \
     vendor/realme/RMX1851/proprietary/lib64/com.qualcomm.qti.imscmservice@1.0.so:system/lib64/com.qualcomm.qti.imscmservice@1.0.so \
     vendor/realme/RMX1851/proprietary/lib64/com.qualcomm.qti.imscmservice@2.0.so:system/lib64/com.qualcomm.qti.imscmservice@2.0.so \
@@ -148,12 +139,7 @@ PRODUCT_COPY_FILES += \
     vendor/realme/RMX1851/proprietary/lib64/libwfdclient.so:system/lib64/libwfdclient.so \
     vendor/realme/RMX1851/proprietary/lib64/libwfdnative.so:system/lib64/libwfdnative.so \
     vendor/realme/RMX1851/proprietary/lib64/vendor.display.color@1.0.so:system/lib64/vendor.display.color@1.0.so \
-    vendor/realme/RMX1851/proprietary/lib64/vendor.oppo.hardware.biometrics.face@1.0.so:system/lib64/vendor.oppo.hardware.biometrics.face@1.0.so \
-    vendor/realme/RMX1851/proprietary/lib64/vendor.oppo.hardware.biometrics.fingerprint@2.1.so:system/lib64/vendor.oppo.hardware.biometrics.fingerprint@2.1.so \
-    vendor/realme/RMX1851/proprietary/lib64/vendor.oppo.hardware.biometrics.fingerprintpay@1.0.so:system/lib64/vendor.oppo.hardware.biometrics.fingerprintpay@1.0.so \
     vendor/realme/RMX1851/proprietary/lib64/vendor.oppo.hardware.ktv@1.0.so:system/lib64/vendor.oppo.hardware.ktv@1.0.so \
-    vendor/realme/RMX1851/proprietary/lib64/vendor.qti.hardware.biometrics.face@1.0-adapter-helper.so:system/lib64/vendor.qti.hardware.biometrics.face@1.0-adapter-helper.so \
-    vendor/realme/RMX1851/proprietary/lib64/vendor.qti.hardware.biometrics.face@1.0.so:system/lib64/vendor.qti.hardware.biometrics.face@1.0.so \
     vendor/realme/RMX1851/proprietary/lib64/vendor.qti.hardware.data.latency@1.0.so:system/lib64/vendor.qti.hardware.data.latency@1.0.so \
     vendor/realme/RMX1851/proprietary/lib64/vendor.qti.hardware.iop@1.0.so:system/lib64/vendor.qti.hardware.iop@1.0.so \
     vendor/realme/RMX1851/proprietary/lib64/vendor.qti.hardware.iop@2.0.so:system/lib64/vendor.qti.hardware.iop@2.0.so \
