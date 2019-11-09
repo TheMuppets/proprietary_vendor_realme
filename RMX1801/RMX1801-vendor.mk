@@ -91,12 +91,14 @@ PRODUCT_COPY_FILES += \
     vendor/realme/RMX1801/proprietary/framework/qcrilhook.jar:system/framework/qcrilhook.jar \
     vendor/realme/RMX1801/proprietary/framework/qti-telephony-common.jar:system/framework/qti-telephony-common.jar \
     vendor/realme/RMX1801/proprietary/framework/tcmclient.jar:system/framework/tcmclient.jar \
+    vendor/realme/RMX1801/proprietary/framework/vendor.qti.hardware.alarm-V1.0-java.jar:system/framework/vendor.qti.hardware.alarm-V1.0-java.jar \
     vendor/realme/RMX1801/proprietary/lib/com.qualcomm.qti.dpm.api@1.0.so:system/lib/com.qualcomm.qti.dpm.api@1.0.so \
     vendor/realme/RMX1801/proprietary/lib/com.quicinc.cne.server@1.0.so:system/lib/com.quicinc.cne.server@1.0.so \
     vendor/realme/RMX1801/proprietary/lib/libdpmctmgr.so:system/lib/libdpmctmgr.so \
     vendor/realme/RMX1801/proprietary/lib/libdpmfdmgr.so:system/lib/libdpmfdmgr.so \
     vendor/realme/RMX1801/proprietary/lib/libdpmframework.so:system/lib/libdpmframework.so \
     vendor/realme/RMX1801/proprietary/lib/libdpmtcm.so:system/lib/libdpmtcm.so \
+    vendor/realme/RMX1801/proprietary/lib/vendor.qti.hardware.alarm@1.0.so:system/lib/vendor.qti.hardware.alarm@1.0.so \
     vendor/realme/RMX1801/proprietary/lib/vendor.qti.hardware.data.latency@1.0.so:system/lib/vendor.qti.hardware.data.latency@1.0.so \
     vendor/realme/RMX1801/proprietary/lib/vendor.qti.hardware.iop@1.0.so:system/lib/vendor.qti.hardware.iop@1.0.so \
     vendor/realme/RMX1801/proprietary/lib/vendor.qti.hardware.iop@2.0.so:system/lib/vendor.qti.hardware.iop@2.0.so \
@@ -121,6 +123,7 @@ PRODUCT_COPY_FILES += \
     vendor/realme/RMX1801/proprietary/lib64/vendor.display.color@1.0.so:system/lib64/vendor.display.color@1.0.so \
     vendor/realme/RMX1801/proprietary/lib64/vendor.display.color@1.1.so:system/lib64/vendor.display.color@1.1.so \
     vendor/realme/RMX1801/proprietary/lib64/vendor.display.color@1.2.so:system/lib64/vendor.display.color@1.2.so \
+    vendor/realme/RMX1801/proprietary/lib64/vendor.qti.hardware.alarm@1.0.so:system/lib64/vendor.qti.hardware.alarm@1.0.so \
     vendor/realme/RMX1801/proprietary/lib64/vendor.qti.hardware.data.latency@1.0.so:system/lib64/vendor.qti.hardware.data.latency@1.0.so \
     vendor/realme/RMX1801/proprietary/lib64/vendor.qti.hardware.iop@1.0.so:system/lib64/vendor.qti.hardware.iop@1.0.so \
     vendor/realme/RMX1801/proprietary/lib64/vendor.qti.hardware.iop@2.0.so:system/lib64/vendor.qti.hardware.iop@2.0.so \
