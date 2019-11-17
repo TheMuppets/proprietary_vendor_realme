@@ -98,6 +98,7 @@ PRODUCT_COPY_FILES += \
     vendor/realme/RMX1801/proprietary/lib/libdpmfdmgr.so:system/lib/libdpmfdmgr.so \
     vendor/realme/RMX1801/proprietary/lib/libdpmframework.so:system/lib/libdpmframework.so \
     vendor/realme/RMX1801/proprietary/lib/libdpmtcm.so:system/lib/libdpmtcm.so \
+    vendor/realme/RMX1801/proprietary/lib/libsdm-disp-apis.so:system/lib/libsdm-disp-apis.so \
     vendor/realme/RMX1801/proprietary/lib/vendor.qti.hardware.alarm@1.0.so:system/lib/vendor.qti.hardware.alarm@1.0.so \
     vendor/realme/RMX1801/proprietary/lib/vendor.qti.hardware.data.latency@1.0.so:system/lib/vendor.qti.hardware.data.latency@1.0.so \
     vendor/realme/RMX1801/proprietary/lib/vendor.qti.hardware.iop@1.0.so:system/lib/vendor.qti.hardware.iop@1.0.so \
@@ -120,6 +121,7 @@ PRODUCT_COPY_FILES += \
     vendor/realme/RMX1801/proprietary/lib64/libmmrtpdecoder.so:system/lib64/libmmrtpdecoder.so \
     vendor/realme/RMX1801/proprietary/lib64/libmmrtpencoder.so:system/lib64/libmmrtpencoder.so \
     vendor/realme/RMX1801/proprietary/lib64/librcc.so:system/lib64/librcc.so \
+    vendor/realme/RMX1801/proprietary/lib64/libsdm-disp-apis.so:system/lib64/libsdm-disp-apis.so \
     vendor/realme/RMX1801/proprietary/lib64/vendor.display.color@1.0.so:system/lib64/vendor.display.color@1.0.so \
     vendor/realme/RMX1801/proprietary/lib64/vendor.display.color@1.1.so:system/lib64/vendor.display.color@1.1.so \
     vendor/realme/RMX1801/proprietary/lib64/vendor.display.color@1.2.so:system/lib64/vendor.display.color@1.2.so \
