@@ -1,0 +1,284 @@
+<!--
+  Copyright (c) 2016 Qualcomm Technologies, Inc.
+  All Rights Reserved.
+  Confidential and Proprietary - Qualcomm Technologies, Inc.
+-->
+
+<!--
+CommonChromatixInfo:
+	CommonChromatixInfo is the information about chromatix needed for
+		various use cases.
+	Ex:- Preview, Snapshot, ZSL, HFR, HDR, Video, Liveshot for ISP, CPP,
+		3A and SW PostProc.
+	Entries in this node are common for all sensor modes.
+
+ResolutionChromatixInfo:
+	ResolutionChromatixInfo is the information about chromatix needed for
+		various use cases.
+	Ex:- Preview, Snapshot, ZSL, HFR, HDR, Video, Liveshot for ISP, CPP,
+		3A and SW PostProc.
+	Entries in this node are specific to sensor resolution.
+
+ChromatixName:
+	Contains the list of chromatix names for all modules.
+	special_mode_mask:
+		It is the bit mask for special modes, which is used for
+			chromatix selection.
+		Special modes can be any mode that needs a special chromatix.
+		Ex:- scene mode, DZOOM mode, OIS capture mode, flash mode
+		This is applicable for CommonChromatixInfo and
+			ResolutionChromatixInfo.
+		special_mode_mask="0" means none of the special modes are
+			selected.
+	sensor_resolution_index:
+		It is the sensor resolution index for which chromatix libraries
+			will be choosen.
+		It is applicable only in ResolutionChromatixInfo.
+
+ISPCommon :
+	Common tuning library name for ISP
+ISPPreview :
+	Preview tuning library name for ISP
+ISPSnapshot :
+	Snapshot tuning library name for ISP
+CPPCommon :
+	Common tuning library name for CPP
+CPPPreview :
+	Preview tuning library name for CPP
+CPPSnapshot :
+	Snapshot tuning library name for CPP
+CPPLiveshot :
+	Liveshot tuning library name for CPP
+PostProc :
+	Tuning library name for postproc module
+A3Preview :
+	Preview tuning library for 3A
+A3Video :
+	Video tuning library for 3A
+
+Order of Resolution Pick:
+	Assume the current sensor mode is "r" and special mode mask is "s".
+	Chromatix for a module and type is choosen in this order till we find a
+		valid chroamtix file name or else NULL is returned.
+	1) From ResolutionChromatixInfo node for which sensor_resolution_index
+		is "r" and special_mode_mask is "s".
+	2) From CommonChromatixInfo node for which special_mode_mask is "s".
+	3) From ResolutionChromatixInfo node for which sensor_resolution_index
+		is "r" and special_mode_mask is "0".
+	4) From CommonChromatixInfo node for which special_mode_mask is "0".
+	5) NULL is returned if we dont find in any of the above cases.
+
+special_mode_mask values:
+	SENSOR_SPECIAL_MODE_NONE = 0,
+	SENSOR_SPECIAL_MODE_FLASH = 1,
+	SENSOR_SPECIAL_MODE_ZOOM_UPSCALE = 2,
+	SENSOR_SPECIAL_MODE_ZOOM_DOWNSCALE = 4,
+	SENSOR_SPECIAL_MODE_OIS_CAPTURE = 8,
+-->
+
+<ChromatixConfigurationRoot>
+  <CommonChromatixInfo>
+    <ChromatixName special_mode_mask="0">
+      <ISPCommon>imx576_common</ISPCommon>
+      <PostProc>imx576_postproc</PostProc>
+    </ChromatixName>
+  </CommonChromatixInfo>
+  <ResolutionChromatixInfo>
+    <ChromatixName sensor_resolution_index="0" special_mode_mask="0">
+      <ISPPreview>imx576_snapshot</ISPPreview>
+      <ISPSnapshot>imx576_snapshot</ISPSnapshot>
+      <ISPVideo>imx576_snapshot</ISPVideo>
+      <CPPPreview>imx576_cpp_preview</CPPPreview>
+      <CPPSnapshot>imx576_cpp_snapshot</CPPSnapshot>
+      <CPPVideo>imx576_cpp_video</CPPVideo>
+      <CPPLiveshot>imx576_cpp_liveshot</CPPLiveshot>
+      <A3Preview>imx576_fullsize_preview_3a</A3Preview>
+      <A3Video>imx576_fullsize_video_3a</A3Video>
+      <CPPCustom>imx576_cpp_snapshot_20m_multiframe</CPPCustom>
+      <CPPLess>imx576_cpp_snapshot_5m_multiframe_less</CPPLess>
+    </ChromatixName>
+    <ChromatixName sensor_resolution_index="1" special_mode_mask="0">
+      <ISPPreview>imx576_snapshot</ISPPreview>
+      <ISPSnapshot>imx576_snapshot</ISPSnapshot>
+      <ISPVideo>imx576_snapshot</ISPVideo>
+      <CPPPreview>imx576_cpp_preview</CPPPreview>
+      <CPPSnapshot>imx576_cpp_snapshot_5m</CPPSnapshot>
+      <CPPVideo>imx576_cpp_video</CPPVideo>
+      <CPPLiveshot>imx576_cpp_liveshot</CPPLiveshot>
+      <CPPHdr>imx576_cpp_snapshot_5m_hdr</CPPHdr>
+      <CPPSkinFaceHDR>imx576_cpp_snapshot_5m_hdr_face</CPPSkinFaceHDR>
+      <CPPLowHdr>imx576_cpp_snapshot_5m_hdr</CPPLowHdr>
+      <CPPLowSkinFaceHDR>imx576_cpp_snapshot_5m_hdr_face</CPPLowSkinFaceHDR>
+      <A3Preview>imx576_default_preview_3a</A3Preview>
+      <A3Video>imx576_default_video_3a</A3Video>
+      <CPPCustom>imx576_cpp_snapshot_5m_multiframe</CPPCustom>
+      <CPPLess>imx576_cpp_snapshot_5m_multiframe_less</CPPLess>
+      <FaceMuti>imx576_cpp_snapshot_5m_multiframe_p3hdr_cbinning</FaceMuti>
+      <CPPSingleFlash>imx576_cpp_snapshot_5m_flash</CPPSingleFlash>
+      <CPPMultiFlash>imx576_cpp_snapshot_5m_multiframe_flash</CPPMultiFlash>
+    </ChromatixName>
+    <ChromatixName sensor_resolution_index="2" special_mode_mask="0">
+      <ISPPreview>imx576_preview_3hdr</ISPPreview>
+      <ISPSnapshot>imx576_preview_3hdr</ISPSnapshot>
+      <ISPVideo>imx576_preview_3hdr</ISPVideo>
+      <CPPPreview>imx576_cpp_preview_3hdr</CPPPreview>
+      <CPPSnapshot>imx576_cpp_snapshot_5m_3hdr</CPPSnapshot>
+      <CPPVideo>imx576_cpp_video_3hdr</CPPVideo>
+      <CPPLiveshot>imx576_cpp_liveshot_3hdr</CPPLiveshot>
+      <CPPHdr>imx576_cpp_snapshot_5m_hdr</CPPHdr>
+      <CPPSkinFaceHDR>imx576_cpp_snapshot_5m_hdr_face</CPPSkinFaceHDR>
+      <A3Preview>imx576_default_preview_3a_3hdr</A3Preview>
+      <A3Video>imx576_default_video_3a_3hdr</A3Video>
+      <CPPCustom>imx576_cpp_snapshot_5m_multiframe_3hdr</CPPCustom>
+      <CPPLess>imx576_cpp_snapshot_5m_multiframe_less_3hdr</CPPLess>
+      <FaceMuti>imx576_cpp_snapshot_5m_multiframe_p3hdr_cbinning</FaceMuti>
+    </ChromatixName>
+    <ChromatixName sensor_resolution_index="0" special_mode_mask="OPPO_ENGINEER_MODE">
+      <ISPPreview>imx576_snapshot_engineermode</ISPPreview>
+      <ISPSnapshot>imx576_snapshot_engineermode</ISPSnapshot>
+      <ISPCommon>imx576_common_engineermode_fullsize</ISPCommon>
+      <A3Preview>imx576_engineermode_fullsize_preview_3a</A3Preview>
+    </ChromatixName>
+    <ChromatixName sensor_resolution_index="1" special_mode_mask="OPPO_ENGINEER_MODE">
+      <ISPPreview>imx576_snapshot_engineermode</ISPPreview>
+      <ISPSnapshot>imx576_snapshot_engineermode</ISPSnapshot>
+      <ISPCommon>imx576_common_engineermode_binning</ISPCommon>
+      <A3Preview>imx576_engineermode_binning_preview_3a</A3Preview>
+    </ChromatixName>
+    <ChromatixName sensor_resolution_index="0" special_mode_mask="OPPO_FB_ENABLE">
+      <ISPPreview>imx576_snapshot_fb</ISPPreview>
+      <ISPSnapshot>imx576_snapshot_fb</ISPSnapshot>
+      <ISPVideo>imx576_snapshot_fb</ISPVideo>
+      <CPPPreview>imx576_cpp_preview_fb</CPPPreview>
+      <CPPSnapshot>imx576_cpp_snapshot_fb</CPPSnapshot>
+      <CPPVideo>imx576_cpp_video</CPPVideo>
+      <CPPLiveshot>imx576_cpp_liveshot</CPPLiveshot>
+      <A3Preview>imx576_fullsize_preview_3a_fb</A3Preview>
+      <A3Video>imx576_fullsize_video_3a</A3Video>
+      <CPPCustom>imx576_cpp_snapshot_5m_multiframe_fb</CPPCustom>
+      <CPPLess>imx576_cpp_snapshot_5m_multiframe_fb_less</CPPLess>
+    </ChromatixName>
+    <ChromatixName sensor_resolution_index="1" special_mode_mask="OPPO_FB_ENABLE">
+      <ISPPreview>imx576_snapshot_fb</ISPPreview>
+      <ISPSnapshot>imx576_snapshot_fb</ISPSnapshot>
+      <ISPVideo>imx576_snapshot_fb</ISPVideo>
+      <CPPPreview>imx576_cpp_preview_fb</CPPPreview>
+      <CPPSnapshot>imx576_cpp_snapshot_5m_fb</CPPSnapshot>
+      <CPPVideo>imx576_cpp_video</CPPVideo>
+      <CPPLiveshot>imx576_cpp_liveshot</CPPLiveshot>
+      <A3Preview>imx576_default_preview_3a_fb</A3Preview>
+      <A3Video>imx576_default_video_3a</A3Video>
+      <CPPHdr>imx576_cpp_snapshot_5m_hdr</CPPHdr>
+      <CPPSkinFaceHDR>imx576_cpp_snapshot_5m_hdr_face_fb</CPPSkinFaceHDR>
+      <CPPLowHdr>imx576_cpp_snapshot_5m_hdr</CPPLowHdr>
+      <CPPLowSkinFaceHDR>imx576_cpp_snapshot_5m_hdr_face_fb</CPPLowSkinFaceHDR>
+      <CPPCustom>imx576_cpp_snapshot_5m_multiframe_fb</CPPCustom>
+      <CPPLess>imx576_cpp_snapshot_5m_multiframe_fb_less</CPPLess>
+      <FaceMuti>imx576_cpp_snapshot_5m_multiframe_p3hdr_cbinning_fb</FaceMuti>
+      <CPPSingleFlash>imx576_cpp_snapshot_5m_flash</CPPSingleFlash>
+      <CPPMultiFlash>imx576_cpp_snapshot_5m_multiframe_flash</CPPMultiFlash>
+    </ChromatixName>
+    <ChromatixName sensor_resolution_index="1" special_mode_mask="OPPO_WECHAT">
+      <ISPPreview>imx576_snapshot_wchat</ISPPreview>
+      <ISPSnapshot>imx576_snapshot_wchat</ISPSnapshot>
+      <ISPVideo>imx576_snapshot_wchat</ISPVideo>
+      <CPPPreview>imx576_cpp_preview_480p</CPPPreview>
+      <CPPSnapshot>imx576_cpp_snapshot_5m</CPPSnapshot>
+      <CPPVideo>imx576_cpp_preview_480p</CPPVideo>
+      <CPPLiveshot>imx576_cpp_liveshot</CPPLiveshot>
+      <A3Preview>imx576_default_preview_3a_wchat</A3Preview>
+      <A3Video>imx576_default_preview_3a_wchat</A3Video>
+      <CPPCustom>imx576_cpp_snapshot_5m_multiframe</CPPCustom>
+    </ChromatixName>
+    <ChromatixName sensor_resolution_index="1" special_mode_mask="OPPO_PANORAMA">
+      <A3Preview>imx576_default_preview_3a_panorama</A3Preview>
+      <CPPPreview>imx576_cpp_snapshot_panorama</CPPPreview>
+      <CPPSnapshot>imx576_cpp_snapshot_panorama</CPPSnapshot>
+      <CPPCustom>imx576_cpp_snapshot_5m_multiframe</CPPCustom>
+    </ChromatixName>
+    <ChromatixName sensor_resolution_index="1" special_mode_mask="FLASH">
+      <CPPSnapshot>imx576_cpp_snapshot_5m_flash</CPPSnapshot>
+      <CPPCustom>imx576_cpp_snapshot_5m_multiframe_flash</CPPCustom>
+    </ChromatixName>
+    <ChromatixName sensor_resolution_index="1" special_mode_mask="OPPO_SIZE_VGA">
+      <CPPPreview>imx576_cpp_preview_480p</CPPPreview>
+      <CPPVideo>imx576_cpp_preview_480p</CPPVideo>
+      <CPPSnapshot>imx576_cpp_snapshot_5m_otherapk</CPPSnapshot>
+    </ChromatixName>
+    <ChromatixName sensor_resolution_index="1" special_mode_mask="OPPO_SIZE_720P">
+      <CPPPreview>imx576_cpp_preview_720p</CPPPreview>
+      <CPPVideo>imx576_cpp_preview_720p</CPPVideo>
+      <CPPSnapshot>imx576_cpp_snapshot_5m_otherapk</CPPSnapshot>
+    </ChromatixName>
+    <ChromatixName sensor_resolution_index="1" special_mode_mask="OPPO_SIZE_1080P">
+      <CPPPreview>imx576_cpp_preview_1080p</CPPPreview>
+      <CPPVideo>imx576_cpp_preview_1080p</CPPVideo>
+      <CPPSnapshot>imx576_cpp_snapshot_5m_otherapk</CPPSnapshot>
+    </ChromatixName>
+    <ChromatixName sensor_resolution_index="1" special_mode_mask="OPPO_FACEUNLOCK">
+      <ISPCommon>imx576_common_faceunlock</ISPCommon>
+      <ISPPreview>imx576_preview_faceunlock</ISPPreview>
+      <A3Preview>imx576_default_preview_3a_faceunlock</A3Preview>
+      <CPPPreview>imx576_cpp_preview_faceunlock_480p</CPPPreview>
+    </ChromatixName>
+    <ChromatixName sensor_resolution_index="1" special_mode_mask="OPPO_FACEINPUT">
+      <ISPCommon>imx576_common_faceunlock</ISPCommon>
+      <ISPPreview>imx576_preview_faceinput</ISPPreview>
+      <A3Preview>imx576_default_preview_3a_faceinput</A3Preview>
+      <CPPPreview>imx576_cpp_preview_faceinput_480p</CPPPreview>
+    </ChromatixName>
+    <ChromatixName sensor_resolution_index="2" special_mode_mask="OPPO_FB_ENABLE">
+      <ISPPreview>imx576_preview_fb_3hdr</ISPPreview>
+      <ISPSnapshot>imx576_preview_fb_3hdr</ISPSnapshot>
+      <ISPVideo>imx576_preview_fb_3hdr</ISPVideo>
+      <CPPPreview>imx576_cpp_preview_fb_3hdr</CPPPreview>
+      <CPPSnapshot>imx576_cpp_snapshot_5m_fb_3hdr</CPPSnapshot>
+      <CPPVideo>imx576_cpp_video_3hdr</CPPVideo>
+      <CPPLiveshot>imx576_cpp_liveshot_3hdr</CPPLiveshot>
+      <A3Preview>imx576_default_preview_3a_fb_3hdr</A3Preview>
+      <A3Video>imx576_default_video_3a_3hdr</A3Video>
+      <CPPHdr>imx576_cpp_snapshot_5m_hdr</CPPHdr>
+      <CPPSkinFaceHDR>imx576_cpp_snapshot_5m_hdr_face_fb</CPPSkinFaceHDR>
+      <CPPLowHdr>imx576_cpp_snapshot_5m_hdr_face_fb</CPPLowHdr>
+      <CPPCustom>imx576_cpp_snapshot_5m_multiframe_fb_3hdr</CPPCustom>
+      <CPPLess>imx576_cpp_snapshot_5m_multiframe_fb_less_3hdr</CPPLess>
+      <FaceMuti>imx576_cpp_snapshot_5m_multiframe_p3hdr_cbinning_fb</FaceMuti>	  
+    </ChromatixName>
+    <ChromatixName sensor_resolution_index="2" special_mode_mask="OPPO_WECHAT">
+      <ISPPreview>imx576_snapshot_wchat</ISPPreview>
+      <ISPSnapshot>imx576_snapshot_wchat</ISPSnapshot>
+      <ISPVideo>imx576_snapshot_wchat</ISPVideo>
+      <CPPPreview>imx576_cpp_preview_480p_3hdr</CPPPreview>
+      <CPPSnapshot>imx576_cpp_snapshot_5m</CPPSnapshot>
+      <CPPVideo>imx576_cpp_preview_480p</CPPVideo>
+      <CPPLiveshot>imx576_cpp_liveshot_3hdr</CPPLiveshot>
+      <A3Preview>imx576_default_preview_3a_wchat_3hdr</A3Preview>
+      <A3Video>imx576_default_preview_3a_wchat</A3Video>
+      <CPPCustom>imx576_cpp_snapshot_5m_multiframe</CPPCustom>
+    </ChromatixName>
+    <ChromatixName sensor_resolution_index="2" special_mode_mask="OPPO_PANORAMA">
+      <A3Preview>imx576_default_preview_3a_panorama_3hdr</A3Preview>
+      <CPPSnapshot>imx576_cpp_snapshot_5m</CPPSnapshot>
+      <CPPCustom>imx576_cpp_snapshot_5m_multiframe</CPPCustom>
+    </ChromatixName>
+    <ChromatixName sensor_resolution_index="2" special_mode_mask="FLASH">
+      <CPPSnapshot>imx576_cpp_snapshot_5m_flash_3hdr</CPPSnapshot>
+      <CPPCustom>imx576_cpp_snapshot_5m_multiframe_flash_3hdr</CPPCustom>
+    </ChromatixName>
+    <ChromatixName sensor_resolution_index="2" special_mode_mask="OPPO_SIZE_VGA">
+      <CPPPreview>imx576_cpp_preview_480p_3hdr</CPPPreview>
+      <CPPVideo>imx576_cpp_preview_480p</CPPVideo>
+      <CPPSnapshot>imx576_cpp_snapshot_5m_otherapk</CPPSnapshot>
+    </ChromatixName>
+    <ChromatixName sensor_resolution_index="2" special_mode_mask="OPPO_SIZE_720P">
+      <CPPPreview>imx576_cpp_preview_720p_3hdr</CPPPreview>
+      <CPPVideo>imx576_cpp_preview_720p</CPPVideo>
+      <CPPSnapshot>imx576_cpp_snapshot_5m_otherapk</CPPSnapshot>
+    </ChromatixName>
+    <ChromatixName sensor_resolution_index="2" special_mode_mask="OPPO_SIZE_1080P">
+      <CPPPreview>imx576_cpp_preview_1080p_3hdr</CPPPreview>
+      <CPPVideo>imx576_cpp_preview_1080p</CPPVideo>
+      <CPPSnapshot>imx576_cpp_snapshot_5m_otherapk</CPPSnapshot>
+    </ChromatixName>
+  </ResolutionChromatixInfo>
+</ChromatixConfigurationRoot>
