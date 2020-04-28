@@ -129,6 +129,7 @@ PRODUCT_COPY_FILES += \
     vendor/realme/RMX1801/proprietary/lib/vendor.oppo.hardware.ktv@1.0.so:system/lib/vendor.oppo.hardware.ktv@1.0.so \
     vendor/realme/RMX1801/proprietary/lib/vendor.qti.hardware.vpp@1.2.so:system/lib/vendor.qti.hardware.vpp@1.2.so \
     vendor/realme/RMX1801/proprietary/lib64/com.qualcomm.qti.dpm.api@1.0.so:system/lib64/com.qualcomm.qti.dpm.api@1.0.so \
+    vendor/realme/RMX1801/proprietary/lib64/lib-imscamera.so:system/lib64/lib-imscamera.so \
     vendor/realme/RMX1801/proprietary/lib64/lib-imsvideocodec.so:system/lib64/lib-imsvideocodec.so \
     vendor/realme/RMX1801/proprietary/lib64/lib-imsvt.so:system/lib64/lib-imsvt.so \
     vendor/realme/RMX1801/proprietary/lib64/lib-imsvtextutils.so:system/lib64/lib-imsvtextutils.so \
@@ -3249,6 +3250,7 @@ PRODUCT_PACKAGES += \
     libgpustats \
     libsdm-disp-vndapis \
     QtiTelephonyService \
+    imssettings \
     CNEService \
     WfdService \
     com.qualcomm.location \
