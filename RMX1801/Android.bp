@@ -144,9 +144,3 @@ android_app_import {
 	soc_specific: true,
 }
 
-dex_import {
-	name: "WfdCommon",
-	owner: "realme",
-	jars: ["proprietary/framework/WfdCommon.jar"],
-}
-
