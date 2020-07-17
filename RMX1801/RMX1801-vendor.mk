@@ -382,6 +382,7 @@ PRODUCT_COPY_FILES += \
     vendor/realme/RMX1801/proprietary/vendor/etc/scve/facereco/gModel.dat:$(TARGET_COPY_OUT_VENDOR)/etc/scve/facereco/gModel.dat \
     vendor/realme/RMX1801/proprietary/vendor/etc/sensors/sensor_def_18321.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/sensor_def_18321.conf \
     vendor/realme/RMX1801/proprietary/vendor/etc/sensors/sensor_def_qcomdev.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/sensor_def_qcomdev.conf \
+    vendor/realme/RMX1801/proprietary/vendor/etc/vintf/manifest/vendor.qti.gnss@3.0-service.xml:$(TARGET_COPY_OUT_VENDOR)/etc/vintf/manifest/vendor.qti.gnss@3.0-service.xml \
     vendor/realme/RMX1801/proprietary/vendor/etc/xtra_root_cert.pem:$(TARGET_COPY_OUT_VENDOR)/etc/xtra_root_cert.pem \
     vendor/realme/RMX1801/proprietary/vendor/firmware/a512_zap.b00:$(TARGET_COPY_OUT_VENDOR)/firmware/a512_zap.b00 \
     vendor/realme/RMX1801/proprietary/vendor/firmware/a512_zap.b01:$(TARGET_COPY_OUT_VENDOR)/firmware/a512_zap.b01 \
@@ -455,6 +456,7 @@ PRODUCT_COPY_FILES += \
     vendor/realme/RMX1801/proprietary/vendor/lib/hw/sound_trigger.primary.sdm660.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/sound_trigger.primary.sdm660.so \
     vendor/realme/RMX1801/proprietary/vendor/lib/hw/vendor.oppo.hardware.camera.oppopostproc@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vendor.oppo.hardware.camera.oppopostproc@1.0-impl.so \
     vendor/realme/RMX1801/proprietary/vendor/lib/hw/vendor.oppo.hardware.mmdisplayfeature@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vendor.oppo.hardware.mmdisplayfeature@1.0-impl.so \
+    vendor/realme/RMX1801/proprietary/vendor/lib/hw/vendor.qti.gnss@3.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vendor.qti.gnss@3.0-impl.so \
     vendor/realme/RMX1801/proprietary/vendor/lib/hw/vendor.qti.hardware.iop@2.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vendor.qti.hardware.iop@2.0-impl.so \
     vendor/realme/RMX1801/proprietary/vendor/lib/hw/vulkan.sdm660.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vulkan.sdm660.so \
     vendor/realme/RMX1801/proprietary/vendor/lib/libAlacSwDec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libAlacSwDec.so \
@@ -2873,6 +2875,13 @@ PRODUCT_COPY_FILES += \
     vendor/realme/RMX1801/proprietary/vendor/lib/vendor.oppo.hardware.camera.oppopostproc@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.oppo.hardware.camera.oppopostproc@1.0.so \
     vendor/realme/RMX1801/proprietary/vendor/lib/vendor.oppo.hardware.commondcs@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.oppo.hardware.commondcs@1.0.so \
     vendor/realme/RMX1801/proprietary/vendor/lib/vendor.oppo.hardware.mmdisplayfeature@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.oppo.hardware.mmdisplayfeature@1.0.so \
+    vendor/realme/RMX1801/proprietary/vendor/lib/vendor.qti.gnss@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.gnss@1.0.so \
+    vendor/realme/RMX1801/proprietary/vendor/lib/vendor.qti.gnss@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.gnss@1.1.so \
+    vendor/realme/RMX1801/proprietary/vendor/lib/vendor.qti.gnss@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.gnss@1.2.so \
+    vendor/realme/RMX1801/proprietary/vendor/lib/vendor.qti.gnss@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.gnss@2.0.so \
+    vendor/realme/RMX1801/proprietary/vendor/lib/vendor.qti.gnss@2.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.gnss@2.1.so \
+    vendor/realme/RMX1801/proprietary/vendor/lib/vendor.qti.gnss@3.0-service.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.gnss@3.0-service.so \
+    vendor/realme/RMX1801/proprietary/vendor/lib/vendor.qti.gnss@3.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.gnss@3.0.so \
     vendor/realme/RMX1801/proprietary/vendor/lib/vendor.qti.hardware.fingerprint@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.fingerprint@1.0.so \
     vendor/realme/RMX1801/proprietary/vendor/lib/vendor.qti.hardware.perf@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.perf@2.0.so \
     vendor/realme/RMX1801/proprietary/vendor/lib/vendor.qti.hardware.vpp@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.vpp@1.1.so \
@@ -2905,6 +2914,7 @@ PRODUCT_COPY_FILES += \
     vendor/realme/RMX1801/proprietary/vendor/lib64/hw/vendor.oppo.hardware.ktv@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.oppo.hardware.ktv@1.0-impl.so \
     vendor/realme/RMX1801/proprietary/vendor/lib64/hw/vendor.oppo.hardware.mmdisplayfeature@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.oppo.hardware.mmdisplayfeature@1.0-impl.so \
     vendor/realme/RMX1801/proprietary/vendor/lib64/hw/vendor.qti.esepowermanager@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.qti.esepowermanager@1.0-impl.so \
+    vendor/realme/RMX1801/proprietary/vendor/lib64/hw/vendor.qti.gnss@3.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.qti.gnss@3.0-impl.so \
     vendor/realme/RMX1801/proprietary/vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so \
     vendor/realme/RMX1801/proprietary/vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.0-impl.so \
     vendor/realme/RMX1801/proprietary/vendor/lib64/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so \
@@ -3172,6 +3182,13 @@ PRODUCT_COPY_FILES += \
     vendor/realme/RMX1801/proprietary/vendor/lib64/vendor.oppo.hardware.radio.opporadio@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.oppo.hardware.radio.opporadio@1.0.so \
     vendor/realme/RMX1801/proprietary/vendor/lib64/vendor.qti.data.factory@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.data.factory@2.0.so \
     vendor/realme/RMX1801/proprietary/vendor/lib64/vendor.qti.esepowermanager@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.esepowermanager@1.0.so \
+    vendor/realme/RMX1801/proprietary/vendor/lib64/vendor.qti.gnss@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.gnss@1.0.so \
+    vendor/realme/RMX1801/proprietary/vendor/lib64/vendor.qti.gnss@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.gnss@1.1.so \
+    vendor/realme/RMX1801/proprietary/vendor/lib64/vendor.qti.gnss@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.gnss@1.2.so \
+    vendor/realme/RMX1801/proprietary/vendor/lib64/vendor.qti.gnss@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.gnss@2.0.so \
+    vendor/realme/RMX1801/proprietary/vendor/lib64/vendor.qti.gnss@2.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.gnss@2.1.so \
+    vendor/realme/RMX1801/proprietary/vendor/lib64/vendor.qti.gnss@3.0-service.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.gnss@3.0-service.so \
+    vendor/realme/RMX1801/proprietary/vendor/lib64/vendor.qti.gnss@3.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.gnss@3.0.so \
     vendor/realme/RMX1801/proprietary/vendor/lib64/vendor.qti.hardware.alarm@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.alarm@1.0.so \
     vendor/realme/RMX1801/proprietary/vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so \
     vendor/realme/RMX1801/proprietary/vendor/lib64/vendor.qti.hardware.btconfigstore@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.btconfigstore@1.0.so \
