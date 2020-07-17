@@ -49,6 +49,16 @@ android_app_import {
 }
 
 android_app_import {
+	name: "uceShimService",
+	owner: "realme",
+	apk: "proprietary/app/uceShimService/uceShimService.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+}
+
+android_app_import {
 	name: "CNEService",
 	owner: "realme",
 	apk: "proprietary/priv-app/CNEService/CNEService.apk",

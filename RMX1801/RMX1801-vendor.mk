@@ -3241,6 +3241,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libsdm-disp-vndapis \
     QtiTelephonyService \
+    uceShimService \
     CNEService \
     WfdService \
     dpmserviceapp \
