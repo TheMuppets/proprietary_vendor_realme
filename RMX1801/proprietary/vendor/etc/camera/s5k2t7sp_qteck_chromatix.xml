@@ -164,5 +164,11 @@ special_mode_mask values:
       <CPPVideo>s5k2t7sp_cpp_preview_1080p</CPPVideo>
       <CPPSnapshot>s5k2t7sp_cpp_snapshot_5m_otherapk</CPPSnapshot>
     </ChromatixName>	
+    <ChromatixName sensor_resolution_index="1" special_mode_mask="OPPO_FACEUNLOCK">
+      <ISPCommon>s5k2t7sp_common_faceunlock</ISPCommon>
+      <ISPPreview>s5k2t7sp_preview_faceunlock_16051</ISPPreview>
+      <A3Preview>s5k2t7sp_a3_zsl_preview_faceunlock_qteck</A3Preview>
+      <CPPPreview>s5k2t7sp_cpp_preview_faceunlock_480p</CPPPreview>
+    </ChromatixName>
   </ResolutionChromatixInfo>
 </ChromatixConfigurationRoot>
