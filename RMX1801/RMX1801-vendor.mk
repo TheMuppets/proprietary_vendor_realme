@@ -542,6 +542,7 @@ PRODUCT_COPY_FILES += \
     vendor/realme/RMX1801/proprietary/vendor/lib/libadsp_hvx_callback_skel.so:$(TARGET_COPY_OUT_VENDOR)/lib/libadsp_hvx_callback_skel.so \
     vendor/realme/RMX1801/proprietary/vendor/lib/libadsp_hvx_stub.so:$(TARGET_COPY_OUT_VENDOR)/lib/libadsp_hvx_stub.so \
     vendor/realme/RMX1801/proprietary/vendor/lib/libadsprpc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libadsprpc.so \
+    vendor/realme/RMX1801/proprietary/vendor/lib/libarc_sensor_adapter.so:$(TARGET_COPY_OUT_VENDOR)/lib/libarc_sensor_adapter.so \
     vendor/realme/RMX1801/proprietary/vendor/lib/libarcsoft_aiscenedetection.so:$(TARGET_COPY_OUT_VENDOR)/lib/libarcsoft_aiscenedetection.so \
     vendor/realme/RMX1801/proprietary/vendor/lib/libarcsoft_beautyshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libarcsoft_beautyshot.so \
     vendor/realme/RMX1801/proprietary/vendor/lib/libarcsoft_blink_detection.so:$(TARGET_COPY_OUT_VENDOR)/lib/libarcsoft_blink_detection.so \
@@ -562,6 +563,9 @@ PRODUCT_COPY_FILES += \
     vendor/realme/RMX1801/proprietary/vendor/lib/libarcsoft_picbest.so:$(TARGET_COPY_OUT_VENDOR)/lib/libarcsoft_picbest.so \
     vendor/realme/RMX1801/proprietary/vendor/lib/libarcsoft_relighting_pro_image.so:$(TARGET_COPY_OUT_VENDOR)/lib/libarcsoft_relighting_pro_image.so \
     vendor/realme/RMX1801/proprietary/vendor/lib/libarcsoft_smart_denoise.so:$(TARGET_COPY_OUT_VENDOR)/lib/libarcsoft_smart_denoise.so \
+    vendor/realme/RMX1801/proprietary/vendor/lib/libarcsoft_videostabilizer.so:$(TARGET_COPY_OUT_VENDOR)/lib/libarcsoft_videostabilizer.so \
+    vendor/realme/RMX1801/proprietary/vendor/lib/libarcvs.dep.so:$(TARGET_COPY_OUT_VENDOR)/lib/libarcvs.dep.so \
+    vendor/realme/RMX1801/proprietary/vendor/lib/libarcvs.so:$(TARGET_COPY_OUT_VENDOR)/lib/libarcvs.so \
     vendor/realme/RMX1801/proprietary/vendor/lib/libaudcal.so:$(TARGET_COPY_OUT_VENDOR)/lib/libaudcal.so \
     vendor/realme/RMX1801/proprietary/vendor/lib/libaudioEngineerTest.so:$(TARGET_COPY_OUT_VENDOR)/lib/libaudioEngineerTest.so \
     vendor/realme/RMX1801/proprietary/vendor/lib/libaudio_log_utils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libaudio_log_utils.so \
